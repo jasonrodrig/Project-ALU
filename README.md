@@ -32,8 +32,21 @@ Verification using a structured self-checking testbench with coverage analysis
 ---
 
 ## 🏗️ Design Architecture
-- **Inputs**: `clk`, `reset`, `ce`, `opa`, `opb`, `inp_valid`, `mode`, `cmd`  
-- **Outputs**: `res`, `cout`, `oflow`, `g/l/e`, `zero`, `err`  
+- **Inputs**: `clk`, `reset`, `ce`, `opa`, `opb`, `inp_valid`, `mode`, `cmd`   
+- **Outputs**: `res`, `cout`, `oflow`, `g/l/e`, `zero`, `err`
+
+## 🏗️ Paramterized ALU Architecture  
+<img width="720" height="720" alt="image" src="https://github.com/user-attachments/assets/6da9ab08-2b8c-40d5-8dd7-81a938899d66" />
+
+---
+
+## 🏗️ ALU Testbench Architecture
+<img width="720" height="720" alt="image" src="https://github.com/user-attachments/assets/94f53ed7-3842-4463-8666-0061e30bf369" />
+
+### 📑 Stimulus Vector Format for Self-Checking ALU
+<img width="720" height="720" alt="image" src="https://github.com/user-attachments/assets/8830bc70-7a62-4534-85ee-8a6a6de8b318" />
+
+---
 
 ### Supported Operations
 **Unsigned Arithmetic**: ADD, SUB, ADD_CIN, SUB_CIN, INC/DEC, CMP, ADD_MUL, SH_MUL  
@@ -65,10 +78,13 @@ The verification environment is modular and **self-checking**, ensuring correctn
 
 ## ✅ Results
 - Verified correct behaviour across all operations  
-- Corner cases tested: clock disable, back-to-back MUL/ADD, CMD variations  
+- Corner cases tested: clock disable, back-to-back MUL/ADD, Invalid CMD for different Mode  
 - **Synthesized** using Xilinx Vivado → Clean, hardware-compatible RTL  
 - **Simulated** using Questa SIM → Observed waveforms + correctness logs  
-- **Scoreboard results** stored in `result.txt`  
+- **Scoreboard results** stored in `result.txt`
+  
+### ALU coverage Report
+<img width="895" height="355" alt="image" src="https://github.com/user-attachments/assets/71ebda11-c048-4067-b5c2-ddf2d81f754b" />
 
 ---
 
