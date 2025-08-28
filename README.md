@@ -109,4 +109,9 @@ The verification environment is modular and **self-checking**, ensuring correctn
 
 ---
 
+## 👨‍💻 Author
+- **Jason Rodrigues**
+- **EMP ID : 6078**
+
+---  
 
